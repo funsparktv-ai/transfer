@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Registration</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <a href="/" class="back-button">Back to Home</a>
+    <div class="container">
+        <h2>Candidate Registration</h2>
+        <form action="/register_candidate" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="current_company">Current Company:</label>
+            <input type="text" id="current_company" name="current_company" placeholder="Enter your current company">
+
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" name="designation" placeholder="Enter your current job title">
+
+            <label for="work_experience">Work Experience:</label>
+            <textarea id="work_experience" name="work_experience" placeholder="Describe your work experience"></textarea>
+
+            <label for="total_experience">Total Experience:</label>
+            <input type="number" id="total_experience" name="total_experience" placeholder="Enter total years of experience" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter your preferred location" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

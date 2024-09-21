@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Available Jobs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Department</th>
+                    <th>Location</th>
+                    <th>Experience Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for job in jobs %}
+                <tr>
+                    <td>{{ job[2] }}</td>
+                    <td>{{ job[3] }}</td>
+                    <td>{{ job[4] }}</td>
+                    <td>{{ job[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="back-button" href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>

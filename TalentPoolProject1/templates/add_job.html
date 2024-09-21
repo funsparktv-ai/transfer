@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %}Add Job{% endblock %}
+{% block content %}
+    <h2>Add Job Opportunity</h2>
+    <form method="POST">
+        <label for="dealer_id">Dealer ID:</label>
+        <input type="number" id="dealer_id" name="dealer_id" required>
+
+        <label for="title">Job Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="experience_level">Experience Level:</label>
+        <input type="text" id="experience_level" name="experience_level" required>
+
+        <button type="submit">Add Job</button>
+    </form>
+    <a class="back-button" href="{{ url_for('manage_jobs') }}">Back to Manage Jobs</a>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candidate Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Register as Candidate</h2>
+        <form method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="current_company">Current Company:</label>
+            <input type="text" id="current_company" name="current_company">
+
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" name="designation">
+
+            <label for="work_experience">Work Experience:</label>
+            <input type="text" id="work_experience" name="work_experience">
+
+            <label for="total_experience">Total Experience (years):</label>
+            <input type="number" id="total_experience" name="total_experience">
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"></textarea>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <a class="back-button" href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>

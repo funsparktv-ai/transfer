@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post a Job</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Post a Job</h2>
+        <form method="POST">
+            <label for="title">Job Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="experience_level">Experience Level:</label>
+            <input type="text" id="experience_level" name="experience_level">
+
+            <button type="submit">Post Job</button>
+        </form>
+        <a class="back-button" href="{{ url_for('login_dealer') }}">Back to Dealer Dashboard</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Terms & Conditions</h2>
+        <p>By using this platform, you agree to the following terms and conditions...</p>
+        <form method="POST" action="/agree_terms">
+            <button type="submit">Agree</button>
+        </form>
+        <a class="back-button" href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>

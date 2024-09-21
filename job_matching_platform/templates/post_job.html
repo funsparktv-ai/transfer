@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <a href="/" class="back-button">Back to Home</a>
+    <div class="container">
+        <h2>Post a Job</h2>
+        <form action="/post_job" method="POST">
+            <label for="dealer_id">Dealer ID:</label>
+            <input type="text" id="dealer_id" name="dealer_id" placeholder="Enter dealer ID" required>
+
+            <label for="title">Job Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter job title" required>
+
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" placeholder="Enter department" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter job location" required>
+
+            <label for="experience_level">Experience Level:</label>
+            <input type="text" id="experience_level" name="experience_level" placeholder="Enter experience level" required>
+
+            <button type="submit">Post Job</button>
+        </form>
+    </div>
+</body>
+</html>

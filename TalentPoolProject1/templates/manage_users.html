@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Manage Users</h2>
+        <h3>Candidates</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for candidate in candidates %}
+                <tr>
+                    <td>{{ candidate[1] }}</td>
+                    <td>{{ candidate[3] }}</td>
+                    <td>{{ candidate[9] }}</td>
+                    <td>
+                        <a href="#">Block</a> |
+                        <a href="#">Reset Password</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Dealers</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dealership Name</th>
+                    <th>Email</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dealer in dealers %}
+                <tr>
+                    <td>{{ dealer[1] }}</td>
+                    <td>{{ dealer[3] }}</td>
+                    <td>{{ dealer[2] }}</td>
+                    <td>
+                        <a href="#">Block</a> |
+                        <a href="#">Reset Password</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a class="back-button" href="{{ url_for('admin_dashboard') }}">Back to Admin Dashboard</a>
+    </div>
+</body>
+</html>

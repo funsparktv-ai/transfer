@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealer Registration</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <a href="/" class="back-button">Back to Home</a>
+    <div class="container">
+        <h2>Dealer Registration</h2>
+        <form action="/register_dealer" method="POST">
+            <label for="dealership_name">Dealership Name:</label>
+            <input type="text" id="dealership_name" name="dealership_name" placeholder="Enter dealership name" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter dealership location" required>
+
+            <label for="contact_email">Contact Email:</label>
+            <input type="email" id="contact_email" name="contact_email" placeholder="Enter contact email" required>
+
+            <label for="contact_number">Contact Number:</label>
+            <input type="text" id="contact_number" name="contact_number" placeholder="Enter contact number" required>
+
+            <label for="subscription_plan">Subscription Plan:</label>
+            <input type="text" id="subscription_plan" name="subscription_plan" placeholder="Enter subscription plan" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

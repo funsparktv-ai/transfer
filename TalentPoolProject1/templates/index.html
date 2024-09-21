@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to the Job Platform</h2>
+        <a href="{{ url_for('login_candidate') }}">Candidate Login</a> |
+        <a href="{{ url_for('login_dealer') }}">Dealer Login</a> |
+        <a href="{{ url_for('admin_login') }}">Admin Login</a>
+    </div>
+</body>
+</html>
